@@ -40,26 +40,30 @@ $cakeDescription = 'Counter Guru';
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <body class="cyan lighten-5">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="/users/dashboard" class="brand-logo logo-adjustment">Counter Guru</a>
-            </div>
-        </nav>
-        <div class="container footer-adjustment">
-            <div class="row">
-                <div class="col s12 m6 offset-l3 l6">
-                    <div class="card red lighten-2">
-                        <div class="card-content white-text">
-                            <span class="card-title">404!</span>
-                            <p>Page Not Found.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="/users/dashboard" class="white-text">Take me back!</a>
+        <header>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/users/dashboard" class="brand-logo logo-adjustment">Counter Guru</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6 offset-l3 l6">
+                        <div class="card red lighten-2">
+                            <div class="card-content white-text">
+                                <span class="card-title">404!</span>
+                                <p>Page Not Found.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="/users/dashboard" class="white-text">Take me back!</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
         <footer class="page-footer">
             <div class="container">
                 <div class="row">

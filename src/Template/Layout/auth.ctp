@@ -40,29 +40,31 @@ $cakeDescription = 'Couter Guru';
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <body class="cyan lighten-5">
+        <header>
+            <nav>
+                <div class="nav-wrapper">
+                <a href="/users/dashboard" class="brand-logo logo-adjustment">Counter Guru</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="/counters/add">My Counters</a></li>
+                        <li><a href="/usercounters/statistics">Statistics</a></li>
+                        <li><a href="/users/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
 
-        <nav>
-            <div class="nav-wrapper">
-            <a href="/users/dashboard" class="brand-logo logo-adjustment">Counter Guru</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="/counters/add">My Counters</a></li>
-                    <li><a href="/usercounters/statistics">Statistics</a></li>
-                    <li><a href="/users/logout">Logout</a></li>
-                </ul>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="/counters/add">My Counters</a></li>
+                <li><a href="/usercounters/statistics">Statistics</a></li>
+                <li><a href="/users/logout">Logout</a></li>
+            </ul>
+        </header>
+        <main>
+            <?= $this->Flash->render() ?>
+            <div class="container">
+                <?= $this->fetch('content') ?>
             </div>
-        </nav>
-
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="/counters/add">My Counters</a></li>
-            <li><a href="/usercounters/statistics">Statistics</a></li>
-            <li><a href="/users/logout">Logout</a></li>
-        </ul>
-
-        <?= $this->Flash->render() ?>
-        <div class="container">
-            <?= $this->fetch('content') ?>
-        </div>
+        </main>
         <footer class="page-footer">
             <div class="container">
                 <div class="row">

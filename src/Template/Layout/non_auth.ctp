@@ -40,40 +40,43 @@ $cakeDescription = 'Counter Guru';
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <body class="cyan lighten-5">
-        <nav>
-            <div class="nav-wrapper">
-            <a href="/users/login" class="brand-logo logo-adjustment">Counter Guru</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="/users/login">Login</a></li>
-                    <li><a href="/users/register">Register</a></li>
-                </ul>
-            </div>
-        </nav>
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="/users/login">Login</a></li>
-            <li><a href="/users/register">Register</a></li>
-        </ul>
-
-        <?= $this->Flash->render() ?>
-        <div class="container">
-            <?= $this->fetch('content') ?>
-        </div>
-        <footer class="page-footer">
+        <header>
+            <nav>
+                <div class="nav-wrapper">
+                <a href="/users/login" class="brand-logo logo-adjustment">Counter Guru</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="/users/login">Login</a></li>
+                        <li><a href="/users/register">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="/users/login">Login</a></li>
+                <li><a href="/users/register">Register</a></li>
+            </ul>
+        </header>
+        <main>
+            <?= $this->Flash->render() ?>
             <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Counter Guru</h5>
-                        <p class="grey-text text-lighten-4">This project is completed as an assignment.</p>
+                <?= $this->fetch('content') ?>
+            </div>
+        </main>
+        <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text">Counter Guru</h5>
+                            <p class="grey-text text-lighten-4">This project is completed as an assignment.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © <?php echo date('Y');?> Copyright owned by Sandeep Kumar.
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © <?php echo date('Y');?> Copyright owned by Sandeep Kumar.
+                        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                    </div>
                 </div>
-            </div>
         </footer>
     </body>
 

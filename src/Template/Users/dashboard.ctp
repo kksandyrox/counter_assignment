@@ -1,4 +1,4 @@
-<h3>Global Statistics</h3>
+<h4>Global Statistics</h4>
 <table class="striped">
     <thead>
         <tr>

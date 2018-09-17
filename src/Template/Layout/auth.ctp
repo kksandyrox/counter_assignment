@@ -13,61 +13,81 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Couter Guru';
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
+    <head>
+        <?= $this->Html->charset() ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            <?= $cakeDescription ?>:
+            <?= $this->fetch('title') ?>
+        </title>
 
-    <?= $this->Html->meta('icon') ?>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <?= $this->Html->css('dropify.min.css') ?>
-    <?= $this->Html->css('token-input.css') ?>
-    <?= $this->fetch('script') ?>
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-</head>
-
+        <?= $this->Html->meta('icon') ?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <?= $this->Html->css('dropify.min.css') ?>
+        <?= $this->Html->css('token-input.css') ?>
+        <?= $this->fetch('script') ?>
+        <?= $this->fetch('meta') ?>
+        <?= $this->fetch('css') ?>
+    </head>
 
     <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-<body>
-<!--Navbar-->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="/users/dashboard" class="brand-logo">Counter Guru</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/counters/add">My Counters</a></li>
-        <li><a href="/usercounters/statistics">Statistics</a></li>
-        <li><a href="/users/logout">Logout</a></li>
-      </ul>
-    </div>
-  </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container">
-        <?= $this->fetch('content') ?>
-        
-    </div>
-    <footer>
-    </footer>
-</body>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <body class="cyan lighten-5">
+
+        <nav>
+            <div class="nav-wrapper">
+            <a href="/users/dashboard" class="brand-logo">Counter Guru</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/counters/add">My Counters</a></li>
+                    <li><a href="/usercounters/statistics">Statistics</a></li>
+                    <li><a href="/users/logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="/counters/add">My Counters</a></li>
+            <li><a href="/usercounters/statistics">Statistics</a></li>
+            <li><a href="/users/logout">Logout</a></li>
+        </ul>
+
+        <?= $this->Flash->render() ?>
+        <div class="container">
+            <?= $this->fetch('content') ?>
+        </div>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Counter Guru</h5>
+                        <p class="grey-text text-lighten-4">This project is completed as an assignment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © <?php echo date('Y');?> Copyright owned by Sandeep Kumar.
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+    </body>
     <?php
         echo $this->Html->script('jquery.js');
-        echo $this->Html->script('popper.min.js');?>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        echo $this->Html->script('popper.min.js');
+    ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-       <?php
-
+   <?php
         echo $this->Html->script('chart.js');
         echo $this->Html->script('custom.js');
     ?>

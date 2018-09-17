@@ -12,36 +12,74 @@
  * @since         0.10.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
+
+$cakeDescription = 'Counter Guru';
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?= $this->Html->charset() ?>
-    <title>
-        <?= $this->fetch('title') ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
+    <head>
+        <?= $this->Html->charset() ?>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+            <?= $cakeDescription ?>:
+            <?= $this->fetch('title') ?>
+        </title>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
+        <?= $this->Html->meta('icon') ?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <?= $this->Html->css('style.css') ?>
+        <?= $this->fetch('script') ?>
+        <?= $this->fetch('meta') ?>
+        <?= $this->fetch('css') ?>
+    </head>
 
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
-</head>
-<body>
-    <div id="container">
-        <div id="header">
-            <h1><?= __('Error') ?></h1>
-        </div>
-        <div id="content">
-            <?= $this->Flash->render() ?>
+    <title>Material Design Bootstrap</title>
 
-            <?= $this->fetch('content') ?>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <body class="cyan lighten-5">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/users/dashboard" class="brand-logo">Counter Guru</a>
+            </div>
+        </nav>
+        <div class="container footer-adjustment">
+            <div class="row">
+                <div class="col s12 m6 offset-l3 l6">
+                    <div class="card red lighten-2">
+                        <div class="card-content white-text">
+                            <span class="card-title">404!</span>
+                            <p>Page Not Found.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="/users/dashboard" class="white-text">Take me back!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="footer">
-            <?= $this->Html->link(__('Back'), 'javascript:history.back()') ?>
-        </div>
-    </div>
-</body>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Counter Guru</h5>
+                        <p class="grey-text text-lighten-4">This project is completed as an assignment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © <?php echo date('Y');?> Copyright owned by Sandeep Kumar.
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <?php
+        echo $this->Html->script('jquery.js');
+        echo $this->Html->script('popper.min.js');
+    ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>

@@ -10,7 +10,7 @@ $(document).ready(function(){
 	        success: function(data) {
 	            units = JSON.parse(data);
 	            console.log('Units', units);
-	        } 
+	        }
 	     });
 		return units;
 	}
@@ -25,12 +25,14 @@ $(document).ready(function(){
 	        success: function(data) {
 	            counters = JSON.parse(data);
 	            console.log('Counters', counters);
-	        } 
+	        }
 	     });
-		return counters;		
+		return counters;
 	}
- 
-	 $('.modal').modal();
+
+	$('.modal').modal();
+
+    $('.sidenav').sidenav();
 
 	$("#counter-name, #counter-name-modal").autocomplete({
 		data: getCounters(),
@@ -43,10 +45,14 @@ $(document).ready(function(){
 	});
 
 	$('#start-date').datepicker({
-		format: "yyyy-mm-dd"
-	});
-	$('#end-date').datepicker({
-		format: "yyyy-mm-dd"
+		format: "yyyy-mm-dd",
+        autoClose: true,
+        maxDate: new Date()
+    });
+    $('#end-date').datepicker({
+        format: "yyyy-mm-dd",
+        autoClose: true,
+        maxDate: new Date()
 	});
 
     function createBackgroundColor() {
@@ -68,7 +74,7 @@ $(document).ready(function(){
     }
 
     function getRandom() {
-    	return Math.floor(Math.random() * 255) + 1  
+    	return Math.floor(Math.random() * 255) + 1
     }
 
     function getLabels() {

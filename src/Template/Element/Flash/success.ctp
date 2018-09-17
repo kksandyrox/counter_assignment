@@ -4,12 +4,9 @@ if (!isset($params['escape']) || $params['escape'] !== false) {
 }
 ?>
 <div class="container">
-	<div class="row">
-		<div class="col l6 offset-l4">
-			<div class="chip teal lighten-3">
-			   	<?= $message ?>
-			    <i class="close material-icons">close</i>
-			 </div>
-		</div>
-	</div>
+    <div class="row">
+        <p class="teal-text lighten-3 center-align">
+            <?= $message ?>
+        </p>
+    </div>
 </div>

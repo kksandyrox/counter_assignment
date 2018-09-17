@@ -59,6 +59,7 @@ class CountersController extends AppController
             $savedUserCounter = $this->saveUserCounter($counterId, $unitId, $quantity);
             if($savedUserCounter) {
                 $this->Flash->success(__('The counter has been saved.'));
+                return $this->redirect(array('action' => 'add', 'controller' => 'counters'));
             }
             else {
                 $this->Flash->error(__('The counter could not be saved. Please, try again.'));
@@ -84,7 +85,7 @@ class CountersController extends AppController
                 'name' => $name
                 )
             )
-        )->first(); 
+        )->first();
         if(empty($counter)) {
             $counter = $this->Counters->newEntity();
             $counterData['name'] = $name;
@@ -113,7 +114,7 @@ class CountersController extends AppController
             $unitSave = $this->Counters->UserCounters->Units->save($unit);
             return $unitSave->id;
         }
-        return $unit->id;        
+        return $unit->id;
     }
 
     public function saveUserCounter($counterId, $unitId, $quantity) {

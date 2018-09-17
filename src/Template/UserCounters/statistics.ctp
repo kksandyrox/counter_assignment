@@ -4,7 +4,7 @@
 	</div>
 </div>
 
-<?php 
+<?php
 	$startDateValue = !empty($startDate) ? $startDate : '';
 	$endDateValue = !empty($endDate) ? $endDate : '';
 	$counterNameValue = !empty($counterName) ? $counterName : '';
@@ -15,25 +15,25 @@
  	<div class="col l3">
         <div class="input-field col s12">
  			<p>Counter</p>
-            <input name="name" id="counter-name" type="text" class="autocomplete"  required="required" placeholder="Select Counter" value="<?php echo $counterNameValue;?>">
+            <input name="name" id="counter-name" type="text" class="autocomplete"  required="required" placeholder="Select Counter *" value="<?php echo $counterNameValue;?>">
         </div>
  	</div>
  	<div class="col l3">
 		<div class="input-field col s12">
  			<p>Units</p>
-			<input name="unit_name" type="text" id="unit-name" class="autocomplete" required="required" placeholder="Select Unit" value="<?php echo $unitNameValue;?>">
+			<input name="unit_name" type="text" id="unit-name" class="autocomplete" required="required" placeholder="Select Unit *" value="<?php echo $unitNameValue;?>">
 		</div>
  	</div>
  	<div class="col l3">
  		<div class="input-field col s12">
  			<p>Start Date</p>
- 			<input id="start-date" name="start_date" placeholder="Select Start Date"  type="text" class="datepicker" value="<?php echo $startDateValue;?>">
+ 			<input id="start-date" name="start_date" placeholder="Select Start Date *" required="required" type="text" class="datepicker" value="<?php echo $startDateValue;?>">
  		</div>
  	</div>
  	<div class="col l3">
  		<div class="input-field col s12">
  			<p>End Date</p>
- 			<input id="end-date" name="end_date"  placeholder="Select End Date" type="text" class="datepicker" value="<?php echo $endDateValue;?>">
+ 			<input id="end-date" name="end_date"  placeholder="Select End Date *" required="required" type="text" class="datepicker" value="<?php echo $endDateValue;?>">
  		</div>
  	</div>
  	<div class="row">
@@ -50,5 +50,5 @@
 	</div>
 	<input type="hidden" name="" id = "stat-values" data-values='<?php echo $chartValue;?>'>
 	<input type="hidden" name="" id = "labels" data-values='<?php echo $labels;?>'>
-	<input type="hidden" name="" id = "zzz" data-values='<?php echo $zzz;?>'>	
+	<input type="hidden" name="" id = "zzz" data-values='<?php echo $zzz;?>'>
 <?php endif;?>

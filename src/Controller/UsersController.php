@@ -108,7 +108,7 @@ class UsersController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function login() {        
+    public function login() {
         $this->viewBuilder()->setLayout('non_auth');
         if(!empty($this->Auth->user('id'))) {
             return $this->redirect($this->Auth->redirectUrl());
@@ -139,7 +139,7 @@ class UsersController extends AppController
                 $this->Flash->success(__('Successfuly Registerd. Please login to continue.'));
                 return $this->redirect(['action' => 'login']);
             } else {
-                $this->Flash->error(__('Please fill up the form properly.'));
+                $this->Flash->error(__('Please check the form for errors.'));
             }
         }
         $this->set(compact('user'));
@@ -155,7 +155,7 @@ class UsersController extends AppController
         $query = "SELECT c.name as counter_name, un.name as unit_name, sum(uc.quantity) as quantity, max(uc.created) as last_updated from user_counters as uc
                     JOIN counters as c ON uc.counter_id = c.id
                     JOIN units as un ON uc.unit_id = un.id
-                    GROUP by counter_name, unit_name 
+                    GROUP by counter_name, unit_name
                     ORDER by last_updated DESC ";
         $connection = ConnectionManager::get('default');
         $dashboardStats = $connection->execute($query)->fetchAll('assoc');

@@ -42,7 +42,7 @@ $cakeDescription = 'Counter Guru';
     <body class="cyan lighten-5">
         <nav>
             <div class="nav-wrapper">
-                <a href="/users/dashboard" class="brand-logo">Counter Guru</a>
+                <a href="/users/dashboard" class="brand-logo logo-adjustment">Counter Guru</a>
             </div>
         </nav>
         <div class="container footer-adjustment">

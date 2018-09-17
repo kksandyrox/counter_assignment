@@ -28,8 +28,6 @@ $cakeDescription = 'Counter Guru';
 
         <?= $this->Html->meta('icon') ?>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <?= $this->Html->css('dropify.min.css') ?>
-        <?= $this->Html->css('dropify.min.css') ?>
         <?= $this->Html->css('style.css') ?>
         <?= $this->fetch('script') ?>
         <?= $this->fetch('meta') ?>
@@ -44,7 +42,7 @@ $cakeDescription = 'Counter Guru';
     <body class="cyan lighten-5">
         <nav>
             <div class="nav-wrapper">
-            <a href="/users/login" class="brand-logo">Counter Guru</a>
+            <a href="/users/login" class="brand-logo logo-adjustment">Counter Guru</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="/users/login">Login</a></li>

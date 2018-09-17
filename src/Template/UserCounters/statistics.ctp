@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col offset-l3 l6">
-		<h4>Use Below Filters To Generate Statistics.</h4>
+		<h4 class="center-align">Use Below Filters To Generate Statistics.</h4>
 	</div>
 </div>
 

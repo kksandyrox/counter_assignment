@@ -28,8 +28,7 @@ $cakeDescription = 'Couter Guru';
 
         <?= $this->Html->meta('icon') ?>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <?= $this->Html->css('dropify.min.css') ?>
-        <?= $this->Html->css('token-input.css') ?>
+        <?= $this->Html->css('style.css') ?>
         <?= $this->fetch('script') ?>
         <?= $this->fetch('meta') ?>
         <?= $this->fetch('css') ?>
@@ -44,7 +43,7 @@ $cakeDescription = 'Couter Guru';
 
         <nav>
             <div class="nav-wrapper">
-            <a href="/users/dashboard" class="brand-logo">Counter Guru</a>
+            <a href="/users/dashboard" class="brand-logo logo-adjustment">Counter Guru</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="/counters/add">My Counters</a></li>

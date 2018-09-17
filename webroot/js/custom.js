@@ -46,13 +46,11 @@ $(document).ready(function(){
 
 	$('#start-date').datepicker({
 		format: "yyyy-mm-dd",
-        autoClose: true,
-        maxDate: new Date()
+        autoClose: true
     });
     $('#end-date').datepicker({
         format: "yyyy-mm-dd",
-        autoClose: true,
-        maxDate: new Date()
+        autoClose: true
 	});
 
     function createBackgroundColor() {
